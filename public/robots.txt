@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ashwin1730.github.io/ashwin-portfolio/sitemap.xml
