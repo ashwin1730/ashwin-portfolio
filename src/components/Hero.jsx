@@ -74,7 +74,7 @@ function Hero() {
           className="flex justify-center"
         >
           <img
-            src="/images/profile.jpg"
+            src={`${import.meta.env.BASE_URL}images/profile.jpg`}
             alt="Ashwin Kamble - Software Engineer"
             className="w-64 h-64 md:w-96 md:h-96 object-cover rounded-full border-4 border-blue-500 shadow-2xl shadow-blue-500/20"
           />
