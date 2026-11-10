@@ -1,11 +1,12 @@
 
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
+
 const projects = [
   {
     title: "E-Commerce Negotiation Chatbot",
     description:
-      "An intelligent chatbot designed to support product price negotiation in an e-commerce application.",
+      "Developed an AI-powered e-commerce negotiation chatbot that enables interactive product price discussions, combining Python, JavaScript, and MongoDB.",
     technologies: ["Python", "JavaScript", "MongoDB", "AI"],
     github: "",
     demo: "",
@@ -13,7 +14,7 @@ const projects = [
   {
     title: "EV Charging Station Finder",
     description:
-      "An application to find EV charging stations and manage charging slot bookings.",
+      "Built an EV Charging Station Finder application that helps users locate electric vehicle charging stations and manage charging slot bookings using mapping technology.",
     technologies: ["React", "Node.js", "MongoDB", "Maps API"],
     github: "",
     demo: "",
@@ -21,7 +22,7 @@ const projects = [
   {
     title: "Hotel Management System",
     description:
-      "A hotel management application supporting room booking, CRUD operations and database management.",
+      "Designed a Hotel Management System with room booking functionality, CRUD operations, and structured database management using SQL.",
     technologies: ["Python", "SQL", "Database Design"],
     github: "",
     demo: "",
@@ -29,7 +30,7 @@ const projects = [
   {
     title: "Fruit Disease Detection",
     description:
-      "A deep learning project designed to identify fruit diseases through image classification.",
+      "Developed a deep learning-based fruit disease detection system using image classification techniques with Python, TensorFlow, and OpenCV.",
     technologies: ["Python", "TensorFlow", "OpenCV"],
     github: "",
     demo: "",
@@ -43,7 +44,6 @@ function Projects() {
       className="py-24 px-8 md:px-24 bg-[#0b1120]"
     >
       <div className="max-w-6xl mx-auto">
-
         <p className="text-blue-400 font-medium mb-3">
           MY RECENT WORK
         </p>
@@ -53,7 +53,6 @@ function Projects() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-7">
-
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -63,7 +62,6 @@ function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-[#172033] border border-gray-800 rounded-xl p-7 hover:border-blue-500 transition"
             >
-
               <h3 className="text-xl font-bold mb-4">
                 {project.title}
               </h3>
@@ -85,16 +83,16 @@ function Projects() {
 
               <div className="flex gap-5 text-gray-400">
                 {project.github && (
-  <a
-    href={project.github}
-    target="_blank"
-    rel="noreferrer"
-    aria-label="GitHub repository"
-    className="hover:text-blue-400 text-sm"
-  >
-    GitHub Repository
-  </a>
-)}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub repository"
+                    className="hover:text-blue-400 text-sm"
+                  >
+                    GitHub Repository
+                  </a>
+                )}
 
                 {project.demo && (
                   <a
@@ -108,10 +106,8 @@ function Projects() {
                   </a>
                 )}
               </div>
-
             </motion.div>
           ))}
-
         </div>
       </div>
     </section>
