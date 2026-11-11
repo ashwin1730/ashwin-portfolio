@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
+import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 
 const links = [
@@ -17,6 +18,7 @@ const links = [
   ["Experience", "#experience"],
   ["Projects", "#projects"],
   ["Education", "#education"],
+  ["Certifications", "#certifications"],
   ["Contact", "#contact"],
 ];
 
@@ -108,6 +110,7 @@ function App() {
         <Experience />
         <Projects />
         <Education />
+        <Certifications />
         <Contact />
       </main>
 
