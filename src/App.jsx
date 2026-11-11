@@ -1,4 +1,8 @@
 
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
+import { ArrowUpRight, Menu, X, Code2, Mail } from "lucide-react";
+
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -7,26 +11,95 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 
+const links = [
+  ["About", "#about"],
+  ["Skills", "#skills"],
+  ["Experience", "#experience"],
+  ["Projects", "#projects"],
+  ["Education", "#education"],
+  ["Contact", "#contact"],
+];
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  useEffect(() => {
+    document.body.classList.add("portfolio-body");
+    return () => document.body.classList.remove("portfolio-body");
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#0b1120] text-white">
+    <div className="site-shell">
+      <motion.div className="scroll-progress" style={{ scaleX }} />
 
-      {/* Navigation */}
-      <nav className="flex justify-between items-center px-8 md:px-16 py-6 border-b border-gray-800">
+      <div className="ambient ambient-one" />
+      <div className="ambient ambient-two" />
 
-        <h1 className="text-2xl font-bold">
-          Ashwin Kamble<span className="text-blue-400">.</span>
-        </h1>
+      <header className="topbar">
+        <a className="brand" href="#home" aria-label="Ashwin Kamble home">
+          <span className="brand-mark">
+            A<span>.</span>
+          </span>
+          <span>Ashwin Kamble</span>
+        </a>
 
-        <div className="hidden md:flex gap-8 text-gray-300">
-          <a href="#home" className="hover:text-blue-400">Home</a>
-          <a href="#about" className="hover:text-blue-400">About</a>
-          <a href="#skills" className="hover:text-blue-400">Skills</a>
-          <a href="#projects" className="hover:text-blue-400">Projects</a>
-          <a href="#contact" className="hover:text-blue-400">Contact</a>
-        </div>
+        <nav className="desktop-nav" aria-label="Main navigation">
+          {links.map(([label, href]) => (
+            <a key={href} href={href}>
+              {label}
+            </a>
+          ))}
+        </nav>
 
-      </nav>
+        <a className="nav-cta" href="mailto:ashwinkamble2866@gmail.com">
+          Let's talk <ArrowUpRight size={15} />
+        </a>
+
+        <button
+          className="mobile-menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <X /> : <Menu />}
+        </button>
+      </header>
+
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.nav
+            className="mobile-nav"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            aria-label="Mobile navigation"
+          >
+            {links.map(([label, href]) => (
+              <a
+                key={href}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </a>
+            ))}
+
+            <a
+              href="mailto:ashwinkamble2866@gmail.com"
+              onClick={() => setMenuOpen(false)}
+            >
+              Email me
+            </a>
+          </motion.nav>
+        )}
+      </AnimatePresence>
 
       <main>
         <Hero />
@@ -38,10 +111,43 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="text-center py-8 text-gray-500 border-t border-gray-800">
-        © 2026 Ashwin Kamble. All rights reserved.
-      </footer>
+      <footer className="footer">
+        <a className="brand" href="#home">
+          <span className="brand-mark">
+            A<span>.</span>
+          </span>
+          <span>Ashwin Kamble</span>
+        </a>
 
+        <p>© 2026 Ashwin Kamble. All rights reserved.</p>
+
+        <div className="footer-socials">
+          <a
+            href="https://github.com/ashwin1730"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <Code2 size={17} />
+          </a>
+
+          <a
+            href="https://linkedin.com/in/ashwin-kamble-32b814253"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <span className="linkedin-mark">in</span>
+          </a>
+
+          <a
+            href="mailto:ashwinkamble2866@gmail.com"
+            aria-label="Email"
+          >
+            <Mail size={17} />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

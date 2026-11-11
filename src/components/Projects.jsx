@@ -1,117 +1,23 @@
-
 import { motion } from "motion/react";
-import { ExternalLink } from "lucide-react";
-
-const projects = [
-  {
-    title: "E-Commerce Negotiation Chatbot",
-    description:
-      "Developed an AI-powered e-commerce negotiation chatbot that enables interactive product price discussions, combining Python, JavaScript, and MongoDB.",
-    technologies: ["Python", "JavaScript", "MongoDB", "AI"],
-    github: "",
-    demo: "",
-  },
-  {
-    title: "EV Charging Station Finder",
-    description:
-      "Built an EV Charging Station Finder application that helps users locate electric vehicle charging stations and manage charging slot bookings using mapping technology.",
-    technologies: ["React", "Node.js", "MongoDB", "Maps API"],
-    github: "",
-    demo: "",
-  },
-  {
-    title: "Hotel Management System",
-    description:
-      "Designed a Hotel Management System with room booking functionality, CRUD operations, and structured database management using SQL.",
-    technologies: ["Python", "SQL", "Database Design"],
-    github: "",
-    demo: "",
-  },
-  {
-    title: "Fruit Disease Detection",
-    description:
-      "Developed a deep learning-based fruit disease detection system using image classification techniques with Python, TensorFlow, and OpenCV.",
-    technologies: ["Python", "TensorFlow", "OpenCV"],
-    github: "",
-    demo: "",
-  },
+import { ArrowUpRight, Bot, CarFront, Hotel, ScanSearch } from "lucide-react";
+const projects=[
+ {title:"E-Commerce Negotiation Chatbot",description:"An AI-powered e-commerce negotiation chatbot concept for interactive product price discussions, combining Python, JavaScript and MongoDB.",technologies:["Python","JavaScript","MongoDB","AI"],icon:Bot},
+ {title:"EV Charging Station Finder",description:"An application concept that helps users locate electric vehicle charging stations and manage charging slot bookings using mapping technology.",technologies:["React","Node.js","MongoDB","Maps API"],icon:CarFront},
+ {title:"Hotel Management System",description:"A hotel management application with room booking functionality, CRUD operations and structured database management using SQL.",technologies:["Python","SQL","Database Design"],icon:Hotel},
+ {title:"Fruit Disease Detection",description:"A deep learning project designed to identify fruit diseases through image classification using Python, TensorFlow and OpenCV.",technologies:["Python","TensorFlow","OpenCV"],icon:ScanSearch},
 ];
-
-function Projects() {
-  return (
-    <section
-      id="projects"
-      className="py-24 px-8 md:px-24 bg-[#0b1120]"
-    >
-      <div className="max-w-6xl mx-auto">
-        <p className="text-blue-400 font-medium mb-3">
-          MY RECENT WORK
-        </p>
-
-        <h2 className="text-4xl md:text-5xl font-bold mb-12">
-          Featured <span className="text-blue-400">Projects.</span>
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-7">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#172033] border border-gray-800 rounded-xl p-7 hover:border-blue-500 transition"
-            >
-              <h3 className="text-xl font-bold mb-4">
-                {project.title}
-              </h3>
-
-              <p className="text-gray-400 leading-7 mb-6">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-7">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-[#263449] text-blue-300 px-3 py-2 rounded-lg text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex gap-5 text-gray-400">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="GitHub repository"
-                    className="hover:text-blue-400 text-sm"
-                  >
-                    GitHub Repository
-                  </a>
-                )}
-
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Live project demo"
-                    className="hover:text-blue-400"
-                  >
-                    <ExternalLink size={21} />
-                  </a>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+function Projects(){
+ return <section id="projects" className="section-wrap">
+  <motion.div initial={{opacity:0,y:25}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>
+   <p className="section-kicker">04 / SELECTED WORK</p><h2 className="section-title">Things I&apos;ve <span>worked on.</span></h2>
+   <p className="section-lead">A selection of academic and personal projects exploring software, data and applied AI.</p>
+   <div className="project-grid">{projects.map((project,i)=>{const Icon=project.icon;return <motion.article className="glass-card project-card" key={project.title} initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{once:true,amount:.2}} transition={{delay:i*.1,duration:.55}} whileHover={{y:-7}}>
+    <div className="project-top"><span className="project-index">PROJECT / {String(i+1).padStart(2,"0")}</span><span className="project-icon"><Icon size={19}/></span></div>
+    <h3>{project.title}</h3><p>{project.description}</p><div className="tag-row">{project.technologies.map(t=><span className="tag" key={t}>{t}</span>)}</div>
+   </motion.article>})}</div>
+  </motion.div>
+ </section>
 }
-
 export default Projects;
+
+
