@@ -45,11 +45,11 @@ function App() {
       <div className="ambient ambient-two" />
 
       <header className="topbar">
-        <a className="brand" href="#home" aria-label="Ashwin Kamble home">
+        <a className="brand" href="#home" aria-label="Ashwin Arjun Kamble home">
           <span className="brand-mark">
             A<span>.</span>
           </span>
-          <span>Ashwin Kamble</span>
+          <span>Ashwin Arjun Kamble</span>
         </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">
@@ -119,10 +119,10 @@ function App() {
           <span className="brand-mark">
             A<span>.</span>
           </span>
-          <span>Ashwin Kamble</span>
+          <span>Ashwin Arjun Kamble</span>
         </a>
 
-        <p>© 2026 Ashwin Kamble. All rights reserved.</p>
+        <p>© 2026 Ashwin Arjun Kamble. All rights reserved.</p>
 
         <div className="footer-socials">
           <a

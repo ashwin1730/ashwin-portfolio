@@ -53,7 +53,7 @@ function Hero() {
         <div className="orbit"><span className="orbit-node"/></div>
         <div className="photo-halo"/>
         <motion.div className="profile-frame" whileHover={{ scale: 1.035, rotate: 2 }}>
-          <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Ashwin Kamble, Software Engineer and Python Developer" fetchPriority="high"/>
+          <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Ashwin Arjun Kamble, Software Engineer and Python Developer" fetchPriority="high"/>
         </motion.div>
         <motion.div className="floating-chip chip-one" animate={{ y: [0,-9,0] }} transition={{ duration: 4, repeat: Infinity }}> <Code2 size={14} style={{display:"inline",verticalAlign:"middle",marginRight:7}}/> PYTHON.DEV</motion.div>
         <motion.div className="floating-chip chip-two" animate={{ y: [0,9,0] }} transition={{ duration: 5, repeat: Infinity }}><Terminal size={14} style={{display:"inline",verticalAlign:"middle",marginRight:7}}/> BUILD · LEARN · SHIP</motion.div>
