@@ -40,7 +40,7 @@ function Hero() {
         </motion.div>
         <motion.div className="hero-socials" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.15 }}>
           <a href="https://github.com/ashwin1730" target="_blank" rel="noreferrer"><Code2 size={16}/> GitHub</a>
-          <a href="https://linkedin.com/in/ashwin-kamble-32b814253" target="_blank" rel="noreferrer"><span className="linkedin-mark">in</span> LinkedIn</a>
+          <a href="https://www.linkedin.com/in/ashwin-arjun-kamble-32b814253/" target="_blank" rel="noreferrer"><span className="linkedin-mark">in</span> LinkedIn</a>
           <a href="mailto:ashwinkamble2866@gmail.com"><Mail size={16}/> Email</a>
         </motion.div>
         <motion.div className="stats-row" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.3 }}>
@@ -62,5 +62,6 @@ function Hero() {
   );
 }
 export default Hero;
+
 
 

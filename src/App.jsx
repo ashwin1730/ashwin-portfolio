@@ -135,7 +135,7 @@ function App() {
           </a>
 
           <a
-            href="https://linkedin.com/in/ashwin-kamble-32b814253"
+            href="https://www.linkedin.com/in/ashwin-arjun-kamble-32b814253/"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
@@ -156,3 +156,4 @@ function App() {
 }
 
 export default App;
+
