@@ -26,7 +26,7 @@ function Hero() {
           HELLO, WORLD. I&apos;M
         </motion.p>
         <motion.h1 initial={{ opacity: 0, y: 35 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8, ease: [.2,.8,.2,1] }}>
-          Ashwin<br/><span className="gradient-text">Kamble.</span>
+          Ashwin Arjun<br/><span className="gradient-text">Kamble.</span>
         </motion.h1>
         <motion.div className="hero-role" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .7 }}>
           {typed}<span className="typing-caret" />
@@ -62,6 +62,5 @@ function Hero() {
   );
 }
 export default Hero;
-
 
 

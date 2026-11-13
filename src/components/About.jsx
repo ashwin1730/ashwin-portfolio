@@ -15,7 +15,10 @@ function About() {
         <h2 className="section-title">Curious mind.<br/><span>Builder&apos;s mindset.</span></h2>
         <div className="about-grid">
           <div className="about-copy">
-            <p>I&apos;m Ashwin Arjun Kamble, a Software Engineer and Python Developer based in Pune, Maharashtra, India.</p>
+            <p>
+  I'm Ashwin Arjun Kamble, also known as Ashwin Kamble, a Software Engineer
+  and Python Developer at LTIMindtree, based in Pune, Maharashtra, India.
+</p>
             <p>I hold a Bachelor of Engineering degree in Information Technology from Jayawantrao Sawant College of Engineering, affiliated with Savitribai Phule Pune University.</p>
             <p>My interests include Python development, software engineering, problem-solving, Artificial Intelligence and Machine Learning.</p>
             <p>I enjoy learning new technologies and building practical solutions that solve real-world problems.</p>
@@ -29,6 +32,5 @@ function About() {
   );
 }
 export default About;
-
 
 
