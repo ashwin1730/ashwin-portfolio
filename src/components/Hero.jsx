@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowDown, ArrowUpRight, Mail, Code2, Terminal } from "lucide-react";
 const roles = ["Python Developer", "Software Engineer", "AI Enthusiast"];
@@ -20,7 +20,7 @@ function Hero() {
     <section id="home" className="hero">
       <div className="hero-copy">
         <motion.div className="availability" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .15 }}>
-          <span className="status-dot" /> SOFTWARE ENGINEER · PUNE, INDIA
+          <span className="status-dot" /> SOFTWARE ENGINEER Â· PUNE, INDIA
         </motion.div>
         <motion.p className="hero-eyebrow" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: .25 }}>
           HELLO, WORLD. I&apos;M
@@ -39,7 +39,7 @@ function Hero() {
           <a className="button-secondary" href="#contact">Let&apos;s connect <ArrowDown size={15}/></a>
         </motion.div>
         <motion.div className="hero-socials" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.15 }}>
-          <a href="https://github.com/ashwin1730" target="_blank" rel="noreferrer"><Code2 size={16}/> GitHub</a>
+          <a href="https://github.com/ashwinarjunkamble" target="_blank" rel="noreferrer"><Code2 size={16}/> GitHub</a>
           <a href="https://www.linkedin.com/in/ashwin-arjun-kamble-32b814253/" target="_blank" rel="noreferrer"><span className="linkedin-mark">in</span> LinkedIn</a>
           <a href="mailto:ashwinkamble2866@gmail.com"><Mail size={16}/> Email</a>
         </motion.div>
@@ -56,7 +56,7 @@ function Hero() {
           <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Ashwin Arjun Kamble, Software Engineer and Python Developer" fetchPriority="high"/>
         </motion.div>
         <motion.div className="floating-chip chip-one" animate={{ y: [0,-9,0] }} transition={{ duration: 4, repeat: Infinity }}> <Code2 size={14} style={{display:"inline",verticalAlign:"middle",marginRight:7}}/> PYTHON.DEV</motion.div>
-        <motion.div className="floating-chip chip-two" animate={{ y: [0,9,0] }} transition={{ duration: 5, repeat: Infinity }}><Terminal size={14} style={{display:"inline",verticalAlign:"middle",marginRight:7}}/> BUILD · LEARN · SHIP</motion.div>
+        <motion.div className="floating-chip chip-two" animate={{ y: [0,9,0] }} transition={{ duration: 5, repeat: Infinity }}><Terminal size={14} style={{display:"inline",verticalAlign:"middle",marginRight:7}}/> BUILD Â· LEARN Â· SHIP</motion.div>
       </motion.div>
     </section>
   );

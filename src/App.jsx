@@ -1,4 +1,4 @@
-
+﻿
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
 import { ArrowUpRight, Menu, X, Code2, Mail } from "lucide-react";
@@ -122,11 +122,11 @@ function App() {
           <span>Ashwin Arjun Kamble</span>
         </a>
 
-        <p>© 2026 Ashwin Arjun Kamble. All rights reserved.</p>
+        <p>Â© 2026 Ashwin Arjun Kamble. All rights reserved.</p>
 
         <div className="footer-socials">
           <a
-            href="https://github.com/ashwin1730"
+            href="https://github.com/ashwinarjunkamble"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"

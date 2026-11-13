@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+﻿import { motion } from "motion/react";
 import { ArrowUpRight, Code2, Mail, MapPin } from "lucide-react";
 function Contact(){
  return <section id="contact" className="section-wrap">
@@ -9,7 +9,7 @@ function Contact(){
     <div className="contact-links">
      <a className="button-primary" href="mailto:ashwinkamble2866@gmail.com"><Mail size={16}/> ash...@gmail.com <ArrowUpRight size={15}/></a>
      <a className="button-secondary" href="https://www.linkedin.com/in/ashwin-arjun-kamble-32b814253/" target="_blank" rel="noreferrer"><span className="linkedin-mark">in</span> LinkedIn <ArrowUpRight size={15}/></a>
-     <a className="button-secondary" href="https://github.com/ashwin1730" target="_blank" rel="noreferrer"><Code2 size={16}/> GitHub <ArrowUpRight size={15}/></a>
+     <a className="button-secondary" href="https://github.com/ashwinarjunkamble" target="_blank" rel="noreferrer"><Code2 size={16}/> GitHub <ArrowUpRight size={15}/></a>
     </div>
    </div>
    <p className="section-lead" style={{display:"flex",alignItems:"center",gap:8,marginTop:20,fontSize:11}}><MapPin size={14}/> Pune, Maharashtra, India</p>
